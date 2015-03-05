@@ -15,6 +15,8 @@
 		C6BB55041AA8178100923131 /* JustANoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55031AA8178100923131 /* JustANoteTests.m */; };
 		C6BB55171AA817DC00923131 /* CoreDataChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55141AA817DC00923131 /* CoreDataChangeObserver.m */; };
 		C6BB55181AA817DC00923131 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55161AA817DC00923131 /* CoreDataStack.m */; };
+		C6BB551B1AA81C7A00923131 /* JustANote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55191AA81C7A00923131 /* JustANote.xcdatamodeld */; };
+		C6BB55211AA81D3700923131 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55201AA81D3700923131 /* Note.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		C6BB55141AA817DC00923131 /* CoreDataChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataChangeObserver.m; sourceTree = "<group>"; };
 		C6BB55151AA817DC00923131 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		C6BB55161AA817DC00923131 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		C6BB551A1AA81C7A00923131 /* JustANote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JustANote.xcdatamodel; sourceTree = "<group>"; };
+		C6BB551F1AA81D3700923131 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		C6BB55201AA81D3700923131 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,16 +90,9 @@
 		C6BB54E91AA8178100923131 /* JustANote */ = {
 			isa = PBXGroup;
 			children = (
-				C6BB55131AA817DC00923131 /* CoreDataChangeObserver.h */,
-				C6BB55141AA817DC00923131 /* CoreDataChangeObserver.m */,
-				C6BB55151AA817DC00923131 /* CoreDataStack.h */,
-				C6BB55161AA817DC00923131 /* CoreDataStack.m */,
-				C6BB54EC1AA8178100923131 /* AppDelegate.h */,
-				C6BB54ED1AA8178100923131 /* AppDelegate.m */,
-				C6BB54F11AA8178100923131 /* ViewController.h */,
-				C6BB54F21AA8178100923131 /* ViewController.m */,
-				C6BB54F41AA8178100923131 /* Images.xcassets */,
-				C6BB54F61AA8178100923131 /* Main.storyboard */,
+				C6BB55221AA81D5900923131 /* Core Data */,
+				C6BB55231AA81D6400923131 /* Base */,
+				C6BB55241AA81D6F00923131 /* Interface */,
 				C6BB54EA1AA8178100923131 /* Supporting Files */,
 			);
 			path = JustANote;
@@ -124,6 +122,40 @@
 				C6BB55021AA8178100923131 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6BB55221AA81D5900923131 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				C6BB551F1AA81D3700923131 /* Note.h */,
+				C6BB55201AA81D3700923131 /* Note.m */,
+				C6BB55131AA817DC00923131 /* CoreDataChangeObserver.h */,
+				C6BB55141AA817DC00923131 /* CoreDataChangeObserver.m */,
+				C6BB55151AA817DC00923131 /* CoreDataStack.h */,
+				C6BB55161AA817DC00923131 /* CoreDataStack.m */,
+				C6BB55191AA81C7A00923131 /* JustANote.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		C6BB55231AA81D6400923131 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C6BB54EC1AA8178100923131 /* AppDelegate.h */,
+				C6BB54ED1AA8178100923131 /* AppDelegate.m */,
+				C6BB54F41AA8178100923131 /* Images.xcassets */,
+				C6BB54F61AA8178100923131 /* Main.storyboard */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		C6BB55241AA81D6F00923131 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C6BB54F11AA8178100923131 /* ViewController.h */,
+				C6BB54F21AA8178100923131 /* ViewController.m */,
+			);
+			name = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +262,8 @@
 				C6BB54F31AA8178100923131 /* ViewController.m in Sources */,
 				C6BB54F01AA8178100923131 /* main.m in Sources */,
 				C6BB54EE1AA8178100923131 /* AppDelegate.m in Sources */,
+				C6BB551B1AA81C7A00923131 /* JustANote.xcdatamodeld in Sources */,
+				C6BB55211AA81D3700923131 /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +463,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C6BB55191AA81C7A00923131 /* JustANote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C6BB551A1AA81C7A00923131 /* JustANote.xcdatamodel */,
+			);
+			currentVersion = C6BB551A1AA81C7A00923131 /* JustANote.xcdatamodel */;
+			path = JustANote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C6BB54DF1AA8178100923131 /* Project object */;
 }
