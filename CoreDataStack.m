@@ -1,7 +1,4 @@
 //
-//  CoreDataStack.m
-//  DataBoom
-//
 //  Created by Martin Nash on 2/26/15.
 //  Copyright (c) 2015 Martin Nash. All rights reserved.
 //
@@ -41,25 +38,51 @@
 
 
 
-#pragma mark - internal
 
--(NSString*)storeName
+#pragma mark - Configuration
+
+/// must match the name of your xcdatamodel file
+-(NSString*)dataModelName
 {
-    return @"Inventory";
+    return @"JustANote";
 }
 
+/// the reverse domain for your app
+-(NSString*)appReverseDomainIdentifier
+{
+    return @"com.martinjnash.example.JustANote";
+}
+
+/// name of data file on disk
+-(NSString*)dataFileNameWithExtension
+{
+    return @"MyStore.sqlite";
+}
+
+/// directory to create your app subdirectory in
+-(NSSearchPathDirectory)searchPathDirectory
+{
+    return NSApplicationSupportDirectory;
+}
+
+
+
+
+#pragma mark - internal
+
+/// returns url to file `~/<your serach path directory>/<your reverse told app identifier>`
 -(NSURL *)applicationDocumentsDirectory
 {
     NSFileManager *fm = [NSFileManager defaultManager];
-    NSArray *possible = [fm URLsForDirectory:NSApplicationSupportDirectory
-                                   inDomains:NSUserDomainMask];
+    NSArray *possible = [fm URLsForDirectory:[self searchPathDirectory] inDomains:NSUserDomainMask];
     NSURL *appSupportURL = [possible lastObject];
-    return [appSupportURL URLByAppendingPathComponent:@"com.uw.2015.winter.CoreDataApp"];
+    return [appSupportURL URLByAppendingPathComponent:[self appReverseDomainIdentifier]];
 }
 
--(NSURL*)defaultDataFileURL
+/// returns url to file `~/<your serach path directory>/<your reverse told app identifier>/<your data file name with extension>`
+-(NSURL*)dataFileURL
 {
-    return [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"MyData.store"];
+    return [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[self dataFileNameWithExtension]];
 }
 
 -(void)setupStack
@@ -71,12 +94,12 @@
     
     
     // MODEL
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:[self storeName] withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:[self dataModelName] withExtension:@"momd"];
     NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     
     
     // STORE & COORDINATOR
-    NSURL *storeURL = [self defaultDataFileURL];
+    NSURL *storeURL = [self dataFileURL];
     
     NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
     
