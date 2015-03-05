@@ -18,6 +18,14 @@ ConfigurableCoreDataStack *stack = [[ConfigurableCoreDataStack alloc] initWithCo
 NSManagedObjectContext *context = stack.managedObjectContext;
 ```
 
+I recommend creating another class and reutrning your app's various configurations from class methods. See [ConfigurationCreator.m](ConfigurationCreator.m) for an example of how to encapsulate this. Your code will be much cleaner and future you will be happy.
+
+```objc
+CoreDataStackConfiguration *config = [ConfigurationCreator inMemoryStackConfiguration];
+ConfigurableCoreDataStack *stack = [[ConfigurableCoreDataStack alloc] initWithConfiguration:config];
+
+```
+
 
 ### Standard Stack (change or subclass)
 

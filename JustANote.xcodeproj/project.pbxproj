@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C61131491AA8E5B4005BC219 /* ConfigurationCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = C61131481AA8E5B4005BC219 /* ConfigurationCreator.m */; };
+		C611314C1AA8E985005BC219 /* CoreDataChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C611314B1AA8E985005BC219 /* CoreDataChangeObserver.m */; };
+		C611314F1AA8E991005BC219 /* ConfigurationCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = C611314E1AA8E991005BC219 /* ConfigurationCreator.m */; };
 		C6BB54EE1AA8178100923131 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB54ED1AA8178100923131 /* AppDelegate.m */; };
 		C6BB54F01AA8178100923131 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB54EF1AA8178100923131 /* main.m */; };
 		C6BB54F31AA8178100923131 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB54F21AA8178100923131 /* ViewController.m */; };
@@ -16,7 +17,6 @@
 		C6BB55041AA8178100923131 /* JustANoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55031AA8178100923131 /* JustANoteTests.m */; };
 		C6BB551B1AA81C7A00923131 /* JustANote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55191AA81C7A00923131 /* JustANote.xcdatamodeld */; };
 		C6BB55211AA81D3700923131 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55201AA81D3700923131 /* Note.m */; };
-		C6BB55291AA8200D00923131 /* CoreDataChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55261AA8200D00923131 /* CoreDataChangeObserver.m */; };
 		C6BB552A1AA8200D00923131 /* SubclassableCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55281AA8200D00923131 /* SubclassableCoreDataStack.m */; };
 		C6BB55301AA827C300923131 /* ConfigurableCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB552F1AA827C300923131 /* ConfigurableCoreDataStack.m */; };
 /* End PBXBuildFile section */
@@ -32,8 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C61131471AA8E5B4005BC219 /* ConfigurationCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationCreator.h; sourceTree = "<group>"; };
-		C61131481AA8E5B4005BC219 /* ConfigurationCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationCreator.m; sourceTree = "<group>"; };
+		C611314A1AA8E985005BC219 /* CoreDataChangeObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataChangeObserver.h; sourceTree = "<group>"; };
+		C611314B1AA8E985005BC219 /* CoreDataChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataChangeObserver.m; sourceTree = "<group>"; };
+		C611314D1AA8E991005BC219 /* ConfigurationCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationCreator.h; sourceTree = SOURCE_ROOT; };
+		C611314E1AA8E991005BC219 /* ConfigurationCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationCreator.m; sourceTree = SOURCE_ROOT; };
 		C6BB54E71AA8178100923131 /* JustANote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustANote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6BB54EB1AA8178100923131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6BB54EC1AA8178100923131 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,8 +51,6 @@
 		C6BB551A1AA81C7A00923131 /* JustANote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JustANote.xcdatamodel; sourceTree = "<group>"; };
 		C6BB551F1AA81D3700923131 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		C6BB55201AA81D3700923131 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
-		C6BB55251AA8200D00923131 /* CoreDataChangeObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataChangeObserver.h; sourceTree = SOURCE_ROOT; };
-		C6BB55261AA8200D00923131 /* CoreDataChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataChangeObserver.m; sourceTree = SOURCE_ROOT; };
 		C6BB55271AA8200D00923131 /* SubclassableCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassableCoreDataStack.h; sourceTree = SOURCE_ROOT; };
 		C6BB55281AA8200D00923131 /* SubclassableCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubclassableCoreDataStack.m; sourceTree = SOURCE_ROOT; };
 		C6BB552E1AA827C300923131 /* ConfigurableCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurableCoreDataStack.h; sourceTree = SOURCE_ROOT; };
@@ -133,14 +133,14 @@
 		C6BB55221AA81D5900923131 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				C6BB55251AA8200D00923131 /* CoreDataChangeObserver.h */,
-				C6BB55261AA8200D00923131 /* CoreDataChangeObserver.m */,
+				C611314A1AA8E985005BC219 /* CoreDataChangeObserver.h */,
+				C611314B1AA8E985005BC219 /* CoreDataChangeObserver.m */,
 				C6BB552E1AA827C300923131 /* ConfigurableCoreDataStack.h */,
 				C6BB552F1AA827C300923131 /* ConfigurableCoreDataStack.m */,
 				C6BB55271AA8200D00923131 /* SubclassableCoreDataStack.h */,
 				C6BB55281AA8200D00923131 /* SubclassableCoreDataStack.m */,
-				C61131471AA8E5B4005BC219 /* ConfigurationCreator.h */,
-				C61131481AA8E5B4005BC219 /* ConfigurationCreator.m */,
+				C611314D1AA8E991005BC219 /* ConfigurationCreator.h */,
+				C611314E1AA8E991005BC219 /* ConfigurationCreator.m */,
 				C6BB551F1AA81D3700923131 /* Note.h */,
 				C6BB55201AA81D3700923131 /* Note.m */,
 				C6BB55191AA81C7A00923131 /* JustANote.xcdatamodeld */,
@@ -268,12 +268,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6BB55301AA827C300923131 /* ConfigurableCoreDataStack.m in Sources */,
+				C611314F1AA8E991005BC219 /* ConfigurationCreator.m in Sources */,
 				C6BB54F31AA8178100923131 /* ViewController.m in Sources */,
 				C6BB54F01AA8178100923131 /* main.m in Sources */,
 				C6BB552A1AA8200D00923131 /* SubclassableCoreDataStack.m in Sources */,
-				C6BB55291AA8200D00923131 /* CoreDataChangeObserver.m in Sources */,
+				C611314C1AA8E985005BC219 /* CoreDataChangeObserver.m in Sources */,
 				C6BB54EE1AA8178100923131 /* AppDelegate.m in Sources */,
-				C61131491AA8E5B4005BC219 /* ConfigurationCreator.m in Sources */,
 				C6BB551B1AA81C7A00923131 /* JustANote.xcdatamodeld in Sources */,
 				C6BB55211AA81D3700923131 /* Note.m in Sources */,
 			);
