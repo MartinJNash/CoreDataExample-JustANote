@@ -3,20 +3,20 @@
 //  Copyright (c) 2015 Martin Nash. All rights reserved.
 //
 
-#import "CoreDataStack.h"
+#import "SubclassableCoreDataStack.h"
 
-@interface CoreDataStack ()
+@interface SubclassableCoreDataStack ()
 @property (strong, nonatomic) NSString *storeType;
 @end
 
-@implementation CoreDataStack
+@implementation SubclassableCoreDataStack
 
-+(CoreDataStack*)sqliteStack
++(SubclassableCoreDataStack*)sqliteStack
 {
     return [[self alloc] initWithStoreType:NSSQLiteStoreType];
 }
 
-+(CoreDataStack*)inMemoryStack
++(SubclassableCoreDataStack*)inMemoryStack
 {
     return [[self alloc] initWithStoreType:NSInMemoryStoreType];
 }

@@ -6,13 +6,13 @@
 @import Foundation;
 @import CoreData;
 
-@interface CoreDataStack : NSObject
+@interface SubclassableCoreDataStack : NSObject
 
 /// creates new in-memory stack
-+(CoreDataStack*)inMemoryStack;
++(SubclassableCoreDataStack*)inMemoryStack;
 
 /// creates new sqlite stack
-+(CoreDataStack*)sqliteStack;
++(SubclassableCoreDataStack*)sqliteStack;
 
 
 /// moc for interacting with your core data stack

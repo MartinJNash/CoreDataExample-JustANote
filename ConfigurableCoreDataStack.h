@@ -9,12 +9,24 @@
 @import CoreData;
 
 
+/// Data stack configuration protocol
+@protocol StackConfigurator <NSObject>
+-(NSString*)storeType;
+-(NSString*)modelName;
+-(NSString*)appIdentifier;
+-(NSString*)dataFileNameWithExtension;
+-(NSSearchPathDirectory)searchPathDirectory;
+@end
+
+
+
 /// Data stack configuration object
-@interface CoreDataStackConfiguration : NSObject
-@property (strong, nonatomic) NSString *storeType;
-@property (strong, nonatomic) NSString *modelName;
-@property (strong, nonatomic) NSString *appIdentifier;
-@property (strong, nonatomic) NSString *dataFileNameWithExtension;
+@interface CoreDataStackConfiguration : NSObject <StackConfigurator>
+-(instancetype)initWithConfigurator:(id<StackConfigurator>)config;
+@property (copy, nonatomic) NSString *storeType;
+@property (copy, nonatomic) NSString *modelName;
+@property (copy, nonatomic) NSString *appIdentifier;
+@property (copy, nonatomic) NSString *dataFileNameWithExtension;
 @property (assign, nonatomic) NSSearchPathDirectory searchPathDirectory;
 @end
 
@@ -23,5 +35,8 @@
 /// Stack can be configured
 @interface ConfigurableCoreDataStack : NSObject
 -(instancetype)initWithConfiguration:(CoreDataStackConfiguration*)configuration;
+-(instancetype)initWithConfigurator:(id<StackConfigurator>)configurator;
++(instancetype)stackWithConfiguration:(CoreDataStackConfiguration*)configuration;
++(instancetype)stackWithConfigurator:(id<StackConfigurator>)configurator;
 @property (strong, nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
 @end

@@ -7,6 +7,25 @@
 
 
 @implementation CoreDataStackConfiguration
+
+- (instancetype)init
+{
+    @throw [NSString stringWithFormat:@"use method: %@", NSStringFromSelector(@selector(initWithConfigurator:))];
+}
+
+-(instancetype)initWithConfigurator:(id<StackConfigurator>)config
+{
+    self = [super init];
+    if (self) {
+        _storeType = [config storeType];
+        _modelName = [config modelName];
+        _appIdentifier = [config appIdentifier];
+        _dataFileNameWithExtension = [config dataFileNameWithExtension];
+        _searchPathDirectory = [config searchPathDirectory];
+    }
+    return self;
+}
+
 @end
 
 
@@ -17,6 +36,22 @@
 @end
 
 @implementation ConfigurableCoreDataStack
+
++(instancetype)stackWithConfiguration:(CoreDataStackConfiguration *)configuration
+{
+    return [[self alloc] initWithConfiguration:configuration];
+}
+
++(instancetype)stackWithConfigurator:(id<StackConfigurator>)configurator
+{
+    return [[self alloc] initWithConfigurator:configurator];
+}
+
+-(instancetype)initWithConfigurator:(id<StackConfigurator>)configurator
+{
+    CoreDataStackConfiguration *cf = [[CoreDataStackConfiguration alloc] initWithConfigurator:configurator];
+    return [self initWithConfiguration:cf];
+}
 
 -(instancetype)initWithConfiguration:(CoreDataStackConfiguration*)configuration;
 {
