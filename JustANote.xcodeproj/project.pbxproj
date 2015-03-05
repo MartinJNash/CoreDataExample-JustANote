@@ -13,10 +13,10 @@
 		C6BB54F51AA8178100923131 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6BB54F41AA8178100923131 /* Images.xcassets */; };
 		C6BB54F81AA8178100923131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BB54F61AA8178100923131 /* Main.storyboard */; };
 		C6BB55041AA8178100923131 /* JustANoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55031AA8178100923131 /* JustANoteTests.m */; };
-		C6BB55171AA817DC00923131 /* CoreDataChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55141AA817DC00923131 /* CoreDataChangeObserver.m */; };
-		C6BB55181AA817DC00923131 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55161AA817DC00923131 /* CoreDataStack.m */; };
 		C6BB551B1AA81C7A00923131 /* JustANote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55191AA81C7A00923131 /* JustANote.xcdatamodeld */; };
 		C6BB55211AA81D3700923131 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55201AA81D3700923131 /* Note.m */; };
+		C6BB55291AA8200D00923131 /* CoreDataChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55261AA8200D00923131 /* CoreDataChangeObserver.m */; };
+		C6BB552A1AA8200D00923131 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55281AA8200D00923131 /* CoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +42,13 @@
 		C6BB54FD1AA8178100923131 /* JustANoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustANoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6BB55021AA8178100923131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6BB55031AA8178100923131 /* JustANoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JustANoteTests.m; sourceTree = "<group>"; };
-		C6BB55131AA817DC00923131 /* CoreDataChangeObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataChangeObserver.h; sourceTree = "<group>"; };
-		C6BB55141AA817DC00923131 /* CoreDataChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataChangeObserver.m; sourceTree = "<group>"; };
-		C6BB55151AA817DC00923131 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
-		C6BB55161AA817DC00923131 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		C6BB551A1AA81C7A00923131 /* JustANote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JustANote.xcdatamodel; sourceTree = "<group>"; };
 		C6BB551F1AA81D3700923131 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		C6BB55201AA81D3700923131 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		C6BB55251AA8200D00923131 /* CoreDataChangeObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataChangeObserver.h; sourceTree = SOURCE_ROOT; };
+		C6BB55261AA8200D00923131 /* CoreDataChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataChangeObserver.m; sourceTree = SOURCE_ROOT; };
+		C6BB55271AA8200D00923131 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = SOURCE_ROOT; };
+		C6BB55281AA8200D00923131 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +127,12 @@
 		C6BB55221AA81D5900923131 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				C6BB55251AA8200D00923131 /* CoreDataChangeObserver.h */,
+				C6BB55261AA8200D00923131 /* CoreDataChangeObserver.m */,
+				C6BB55271AA8200D00923131 /* CoreDataStack.h */,
+				C6BB55281AA8200D00923131 /* CoreDataStack.m */,
 				C6BB551F1AA81D3700923131 /* Note.h */,
 				C6BB55201AA81D3700923131 /* Note.m */,
-				C6BB55131AA817DC00923131 /* CoreDataChangeObserver.h */,
-				C6BB55141AA817DC00923131 /* CoreDataChangeObserver.m */,
-				C6BB55151AA817DC00923131 /* CoreDataStack.h */,
-				C6BB55161AA817DC00923131 /* CoreDataStack.m */,
 				C6BB55191AA81C7A00923131 /* JustANote.xcdatamodeld */,
 			);
 			name = "Core Data";
@@ -257,10 +257,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6BB55181AA817DC00923131 /* CoreDataStack.m in Sources */,
-				C6BB55171AA817DC00923131 /* CoreDataChangeObserver.m in Sources */,
 				C6BB54F31AA8178100923131 /* ViewController.m in Sources */,
 				C6BB54F01AA8178100923131 /* main.m in Sources */,
+				C6BB552A1AA8200D00923131 /* CoreDataStack.m in Sources */,
+				C6BB55291AA8200D00923131 /* CoreDataChangeObserver.m in Sources */,
 				C6BB54EE1AA8178100923131 /* AppDelegate.m in Sources */,
 				C6BB551B1AA81C7A00923131 /* JustANote.xcdatamodeld in Sources */,
 				C6BB55211AA81D3700923131 /* Note.m in Sources */,
