@@ -17,6 +17,7 @@
 		C6BB55211AA81D3700923131 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55201AA81D3700923131 /* Note.m */; };
 		C6BB55291AA8200D00923131 /* CoreDataChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55261AA8200D00923131 /* CoreDataChangeObserver.m */; };
 		C6BB552A1AA8200D00923131 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB55281AA8200D00923131 /* CoreDataStack.m */; };
+		C6BB55301AA827C300923131 /* ConfigurableCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB552F1AA827C300923131 /* ConfigurableCoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		C6BB55261AA8200D00923131 /* CoreDataChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataChangeObserver.m; sourceTree = SOURCE_ROOT; };
 		C6BB55271AA8200D00923131 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = SOURCE_ROOT; };
 		C6BB55281AA8200D00923131 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = SOURCE_ROOT; };
+		C6BB552E1AA827C300923131 /* ConfigurableCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurableCoreDataStack.h; sourceTree = SOURCE_ROOT; };
+		C6BB552F1AA827C300923131 /* ConfigurableCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurableCoreDataStack.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 		C6BB55221AA81D5900923131 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				C6BB552E1AA827C300923131 /* ConfigurableCoreDataStack.h */,
+				C6BB552F1AA827C300923131 /* ConfigurableCoreDataStack.m */,
 				C6BB55251AA8200D00923131 /* CoreDataChangeObserver.h */,
 				C6BB55261AA8200D00923131 /* CoreDataChangeObserver.m */,
 				C6BB55271AA8200D00923131 /* CoreDataStack.h */,
@@ -257,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6BB55301AA827C300923131 /* ConfigurableCoreDataStack.m in Sources */,
 				C6BB54F31AA8178100923131 /* ViewController.m in Sources */,
 				C6BB54F01AA8178100923131 /* main.m in Sources */,
 				C6BB552A1AA8200D00923131 /* CoreDataStack.m in Sources */,
@@ -453,6 +459,7 @@
 				C6BB55091AA8178100923131 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6BB550A1AA8178100923131 /* Build configuration list for PBXNativeTarget "JustANoteTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +468,7 @@
 				C6BB550C1AA8178100923131 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
