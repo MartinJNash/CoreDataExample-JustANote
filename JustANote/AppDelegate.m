@@ -10,6 +10,7 @@
 #import "ConfigurableCoreDataStack.h"
 #import "SubclassableCoreDataStack.h"
 #import "ConfigurationCreator.h"
+#import "CoreDataStackConfiguration.h"
 
 @interface AppDelegate ()
 @end

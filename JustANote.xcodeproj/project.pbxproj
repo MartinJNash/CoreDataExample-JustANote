@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C611314C1AA8E985005BC219 /* CoreDataChangeObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C611314B1AA8E985005BC219 /* CoreDataChangeObserver.m */; };
 		C611314F1AA8E991005BC219 /* ConfigurationCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = C611314E1AA8E991005BC219 /* ConfigurationCreator.m */; };
+		C698880D1AAA8B0D0055E5B0 /* CoreDataStackConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C698880C1AAA8B0D0055E5B0 /* CoreDataStackConfiguration.m */; };
 		C6BB54EE1AA8178100923131 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB54ED1AA8178100923131 /* AppDelegate.m */; };
 		C6BB54F01AA8178100923131 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB54EF1AA8178100923131 /* main.m */; };
 		C6BB54F31AA8178100923131 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BB54F21AA8178100923131 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 		C611314B1AA8E985005BC219 /* CoreDataChangeObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataChangeObserver.m; sourceTree = "<group>"; };
 		C611314D1AA8E991005BC219 /* ConfigurationCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationCreator.h; sourceTree = SOURCE_ROOT; };
 		C611314E1AA8E991005BC219 /* ConfigurationCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationCreator.m; sourceTree = SOURCE_ROOT; };
+		C698880B1AAA8B0D0055E5B0 /* CoreDataStackConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStackConfiguration.h; sourceTree = SOURCE_ROOT; };
+		C698880C1AAA8B0D0055E5B0 /* CoreDataStackConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStackConfiguration.m; sourceTree = SOURCE_ROOT; };
 		C6BB54E71AA8178100923131 /* JustANote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustANote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6BB54EB1AA8178100923131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6BB54EC1AA8178100923131 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,6 +78,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C69888091AAA8AC80055E5B0 /* Change Observer */ = {
+			isa = PBXGroup;
+			children = (
+				C611314A1AA8E985005BC219 /* CoreDataChangeObserver.h */,
+				C611314B1AA8E985005BC219 /* CoreDataChangeObserver.m */,
+			);
+			name = "Change Observer";
+			sourceTree = "<group>";
+		};
+		C698880A1AAA8ADC0055E5B0 /* Configurable Stack */ = {
+			isa = PBXGroup;
+			children = (
+				C698880B1AAA8B0D0055E5B0 /* CoreDataStackConfiguration.h */,
+				C698880C1AAA8B0D0055E5B0 /* CoreDataStackConfiguration.m */,
+				C6BB552E1AA827C300923131 /* ConfigurableCoreDataStack.h */,
+				C6BB552F1AA827C300923131 /* ConfigurableCoreDataStack.m */,
+			);
+			name = "Configurable Stack";
+			sourceTree = "<group>";
+		};
 		C6BB54DE1AA8178100923131 = {
 			isa = PBXGroup;
 			children = (
@@ -133,10 +156,8 @@
 		C6BB55221AA81D5900923131 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				C611314A1AA8E985005BC219 /* CoreDataChangeObserver.h */,
-				C611314B1AA8E985005BC219 /* CoreDataChangeObserver.m */,
-				C6BB552E1AA827C300923131 /* ConfigurableCoreDataStack.h */,
-				C6BB552F1AA827C300923131 /* ConfigurableCoreDataStack.m */,
+				C69888091AAA8AC80055E5B0 /* Change Observer */,
+				C698880A1AAA8ADC0055E5B0 /* Configurable Stack */,
 				C6BB55271AA8200D00923131 /* SubclassableCoreDataStack.h */,
 				C6BB55281AA8200D00923131 /* SubclassableCoreDataStack.m */,
 				C611314D1AA8E991005BC219 /* ConfigurationCreator.h */,
@@ -271,6 +292,7 @@
 				C611314F1AA8E991005BC219 /* ConfigurationCreator.m in Sources */,
 				C6BB54F31AA8178100923131 /* ViewController.m in Sources */,
 				C6BB54F01AA8178100923131 /* main.m in Sources */,
+				C698880D1AAA8B0D0055E5B0 /* CoreDataStackConfiguration.m in Sources */,
 				C6BB552A1AA8200D00923131 /* SubclassableCoreDataStack.m in Sources */,
 				C611314C1AA8E985005BC219 /* CoreDataChangeObserver.m in Sources */,
 				C6BB54EE1AA8178100923131 /* AppDelegate.m in Sources */,

@@ -4,30 +4,7 @@
 //
 
 #import "ConfigurableCoreDataStack.h"
-
-
-@implementation CoreDataStackConfiguration
-
-- (instancetype)init
-{
-    @throw [NSString stringWithFormat:@"use method: %@", NSStringFromSelector(@selector(initWithConfigurator:))];
-}
-
--(instancetype)initWithConfigurator:(id<StackConfigurator>)config
-{
-    self = [super init];
-    if (self) {
-        _storeType = [config storeType];
-        _modelName = [config modelName];
-        _appIdentifier = [config appIdentifier];
-        _dataFileNameWithExtension = [config dataFileNameWithExtension];
-        _searchPathDirectory = [config searchPathDirectory];
-    }
-    return self;
-}
-
-@end
-
+#import "CoreDataStackConfiguration.h"
 
 
 @interface ConfigurableCoreDataStack ()
@@ -92,12 +69,12 @@
 {
     // ENSURE APP FILES DIRECTORY EXSITS
     NSFileManager *fm = [NSFileManager defaultManager];
-    NSString *appPath = [[self applicationDocumentsDirectory] path];
+    NSString *appPath = self.dataFileURL.URLByDeletingLastPathComponent.path;
     [fm createDirectoryAtPath:appPath withIntermediateDirectories:YES attributes:nil error:nil];
     
     
     // MODEL
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:self.configuration.modelName withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle bundleForClass:self.class] URLForResource:self.configuration.modelName withExtension:@"momd"];
     NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     
     
@@ -117,7 +94,31 @@
     NSManagedObjectContext *moc = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     moc.persistentStoreCoordinator = psc;
     _managedObjectContext = moc;
-    
 }
+
+-(void)removeCoreDataFilesFromDisk
+{
+    NSError *ee = nil;
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSArray *contents = [fm contentsOfDirectoryAtURL:self.dataFileURL.URLByDeletingLastPathComponent includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsHiddenFiles error:&ee];
+    
+    for (NSURL *oneURL in contents) {
+        if ([oneURL.lastPathComponent hasPrefix:self.configuration.dataFileNameWithExtension]) {
+            [fm removeItemAtURL:oneURL error:&ee];
+        }
+    }
+
+    _managedObjectContext = nil;
+}
+
+-(NSManagedObjectContext *)managedObjectContext
+{
+    if (!_managedObjectContext) {
+        [self setupStack];
+    }
+    
+    return _managedObjectContext;
+}
+
 
 @end

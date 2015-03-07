@@ -8,6 +8,7 @@
 
 #import "ConfigurationCreator.h"
 #import "ConfigurableCoreDataStack.h"
+#import "CoreDataStackConfiguration.h"
 
 @implementation ConfigurationCreator
 
